@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		C9E47CFB285DC5F000C2F652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */; };
 		C9E47CFD285DC5F000C2F652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */; };
-		C9E47CFF285DC5F000C2F652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFE285DC5F000C2F652 /* ViewController.swift */; };
+		C9E47CFF285DC5F000C2F652 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFE285DC5F000C2F652 /* MainViewController.swift */; };
 		C9E47D02285DC5F000C2F652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E47D00285DC5F000C2F652 /* Main.storyboard */; };
 		C9E47D04285DC5F800C2F652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E47D03285DC5F800C2F652 /* Assets.xcassets */; };
 		C9E47D07285DC5F800C2F652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E47D05285DC5F800C2F652 /* LaunchScreen.storyboard */; };
+		C9E47D0F285E0A7500C2F652 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47D0E285E0A7500C2F652 /* UserActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9E47CF7285DC5F000C2F652 /* L10_Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L10_Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9E47CFE285DC5F000C2F652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9E47CFE285DC5F000C2F652 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C9E47D01285DC5F000C2F652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9E47D03285DC5F800C2F652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9E47D06285DC5F800C2F652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9E47D08285DC5F800C2F652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E47D0E285E0A7500C2F652 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */,
 				C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */,
-				C9E47CFE285DC5F000C2F652 /* ViewController.swift */,
+				C9E47CFE285DC5F000C2F652 /* MainViewController.swift */,
+				C9E47D0E285E0A7500C2F652 /* UserActionCell.swift */,
 				C9E47D00285DC5F000C2F652 /* Main.storyboard */,
 				C9E47D03285DC5F800C2F652 /* Assets.xcassets */,
 				C9E47D05285DC5F800C2F652 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E47CFF285DC5F000C2F652 /* ViewController.swift in Sources */,
+				C9E47D0F285E0A7500C2F652 /* UserActionCell.swift in Sources */,
+				C9E47CFF285DC5F000C2F652 /* MainViewController.swift in Sources */,
 				C9E47CFB285DC5F000C2F652 /* AppDelegate.swift in Sources */,
 				C9E47CFD285DC5F000C2F652 /* SceneDelegate.swift in Sources */,
 			);
@@ -305,7 +309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
