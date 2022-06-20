@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91D6016285E4CF800D1EFA9 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6015285E4CF700D1EFA9 /* ImageViewController.swift */; };
+		C927A153285F11A700EEAA01 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C927A152285F11A700EEAA01 /* Course.swift */; };
+		C927A155285F693700EEAA01 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C927A154285F693700EEAA01 /* CoursesViewController.swift */; };
+		C927A157285FB20000EEAA01 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C927A156285FB20000EEAA01 /* CourseCell.swift */; };
 		C9E47CFB285DC5F000C2F652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */; };
 		C9E47CFD285DC5F000C2F652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */; };
 		C9E47CFF285DC5F000C2F652 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E47CFE285DC5F000C2F652 /* MainViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91D6015285E4CF700D1EFA9 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C927A152285F11A700EEAA01 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		C927A154285F693700EEAA01 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		C927A156285FB20000EEAA01 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		C9E47CF7285DC5F000C2F652 /* L10_Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L10_Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,13 +66,17 @@
 		C9E47CF9285DC5F000C2F652 /* L10_Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C9E47CFE285DC5F000C2F652 /* MainViewController.swift */,
+				C91D6015285E4CF700D1EFA9 /* ImageViewController.swift */,
+				C927A154285F693700EEAA01 /* CoursesViewController.swift */,
+				C9E47D0E285E0A7500C2F652 /* UserActionCell.swift */,
+				C927A156285FB20000EEAA01 /* CourseCell.swift */,
+				C927A152285F11A700EEAA01 /* Course.swift */,
+				C9E47D00285DC5F000C2F652 /* Main.storyboard */,
+				C9E47D05285DC5F800C2F652 /* LaunchScreen.storyboard */,
 				C9E47CFA285DC5F000C2F652 /* AppDelegate.swift */,
 				C9E47CFC285DC5F000C2F652 /* SceneDelegate.swift */,
-				C9E47CFE285DC5F000C2F652 /* MainViewController.swift */,
-				C9E47D0E285E0A7500C2F652 /* UserActionCell.swift */,
-				C9E47D00285DC5F000C2F652 /* Main.storyboard */,
 				C9E47D03285DC5F800C2F652 /* Assets.xcassets */,
-				C9E47D05285DC5F800C2F652 /* LaunchScreen.storyboard */,
 				C9E47D08285DC5F800C2F652 /* Info.plist */,
 			);
 			path = L10_Networking;
@@ -142,7 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E47D0F285E0A7500C2F652 /* UserActionCell.swift in Sources */,
+				C927A155285F693700EEAA01 /* CoursesViewController.swift in Sources */,
 				C9E47CFF285DC5F000C2F652 /* MainViewController.swift in Sources */,
+				C927A153285F11A700EEAA01 /* Course.swift in Sources */,
+				C927A157285FB20000EEAA01 /* CourseCell.swift in Sources */,
+				C91D6016285E4CF800D1EFA9 /* ImageViewController.swift in Sources */,
 				C9E47CFB285DC5F000C2F652 /* AppDelegate.swift in Sources */,
 				C9E47CFD285DC5F000C2F652 /* SceneDelegate.swift in Sources */,
 			);

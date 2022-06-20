@@ -56,12 +56,38 @@ class MainViewController: UICollectionViewController {
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let userAction = userActions[indexPath.item]
+        
+        switch userAction {
+        case .downloadImage:
+            performSegue(withIdentifier: "showImage", sender: nil)
+        case .exampleOne:
+            exampleOneButtonPressed()
+        case .exampleTwo:
+            exampleTwoButtonPressed()
+        case .exampleThree:
+            exampleThreeButtonPressed()
+        case .exampleFour:
+            exampleFourButtonPressed()
+        case .ourCourses:
+            performSegue(withIdentifier: "showCourses", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCourses" {
+            let coursesVC = segue.destination as! CoursesViewController
+            coursesVC.fetchCourses()
+        }
+    }
 
     // MARK: - Private Methods
     
     private func successAlert() {
         let alert = UIAlertController(title: "Success",
-                                      message: "You can see results in the Debug area", preferredStyle: .alert)
+                                      message: "You can see the results in the Debug area", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Okey", style: .default)
         alert.addAction(okAction)
@@ -70,12 +96,122 @@ class MainViewController: UICollectionViewController {
     
     private func failedAlert() {
         let alert = UIAlertController(title: "Failed",
-                                      message: "You can see error in the Debug area", preferredStyle: .alert)
+                                      message: "You can see the error in the Debug area", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Okey", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+}
+
+// MARK: - Networking
+extension MainViewController {
+    
+    // пишем методы под каждую кнопку
+    // и для этого создадим еще вверху метод didSelectItemAt, чтобы понять какой у нас экшен был нажат
+    
+    private func exampleOneButtonPressed() {
+        guard let url = URL(string: URLExamples.exampleOne.rawValue) else {
+            return }
+        
+        // нам нужно теперь сделать запросы чтобы получить данные
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+        
+        // дальше нам надо задекодить полученные данные
+            do {
+                let course = try JSONDecoder().decode(Course.self, from: data)
+                
+                // распечатаем теперь и добавим два соданных метода и покажем алерты
+                print(course)
+                
+                // ставим в main поток, потому что это UI элемент, а мы показываем его не в main потоке
+                DispatchQueue.main.async {
+                    self.successAlert()
+                }
+            } catch let error {
+                
+                // распечатаем теперь и добавим два соданных метода и покажем алерты
+                print(error)
+                
+                // ставим в main поток, потому что это UI элемент, а мы показываем его не в main потоке
+                DispatchQueue.main.async {
+                    self.failedAlert()
+                }
+            }
+        }.resume()
+    }
+    
+    private func exampleTwoButtonPressed() {
+        guard let url = URL(string: URLExamples.exampleTwo.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let course = try JSONDecoder().decode([Course].self, from: data)
+                print(course)
+                DispatchQueue.main.async {
+                    self.successAlert()
+                }
+            } catch let error {
+                print(error)
+                DispatchQueue.main.async {
+                    self.failedAlert()
+                }
+            }
+        }.resume()
+    }
+    
+    private func exampleThreeButtonPressed() {
+        guard let url = URL(string: URLExamples.exampleThree.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else {
+                return
+            }
+
+            do {
+                let course = try JSONDecoder().decode(WebsiteDescription.self, from: data)
+                print(course)
+                DispatchQueue.main.async {
+                    self.successAlert()
+                }
+            } catch let error {
+                print(error)
+                DispatchQueue.main.async {
+                    self.failedAlert()
+                }
+            }
+        }.resume()
+    }
+    
+    private func exampleFourButtonPressed() {
+        guard let url = URL(string: URLExamples.exampleFour.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let course = try JSONDecoder().decode(WebsiteDescription.self, from: data)
+                print(course)
+                DispatchQueue.main.async {
+                    self.successAlert()
+                }
+            } catch let error {
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.failedAlert()
+                }
+            }
+        }.resume()
+    }
+    // теперь займемся segue последнего экрана
     
 }
 
